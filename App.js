@@ -1,12 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Android from 'react-native-vector-icons/Android'
+
+Icon.loadFont()
+Android.IconFont()
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.child1}>
+        <Icon name="person" size={40}></Icon>
+        <Text>Perfil</Text>
+      </View>
+
+      <View style={styles.child1}>
+        <Icon name="camera-alt" size={40}></Icon>
+        <Text>Câmera</Text>
+      </View>
+
+      <View style={styles.child1}>
+        <Icon name="exit-to-app" size={40}></Icon>
+        <Text>Sair</Text>
+      </View>
+
     </View>
   );
 }
@@ -14,8 +33,29 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#dedede',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 40,
   },
+    child1: {
+    flex: 1,
+    backgroundColor: '#fafafa',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+
+    margin: 20,
+    width: 300,
+    height: 200,
+    borderRadius: 8,
+
+    elevation: 5,
+    shadowColor: '#010101',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+
+  },
+  
 });
