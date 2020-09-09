@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     height: 100,
     shadowOpacity: 0.0,
     shadowRadius: 3,
-    shadowOffset: '#FAFAFA',
+    shadowOffset:  { width: 0, height: 2 },
     elevation: 5,
     padding:30,
     margin: 20,
