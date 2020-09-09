@@ -2,15 +2,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Android from 'react-native-vector-icons/Android'
-
+import {Routes} from './src/routes/routes'
 Icon.loadFont()
-Android.IconFont()
-
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <Routes/>
+  );
+}
+
+    /*<View style={styles.container}>
       <View style={styles.child1}>
         <Icon name="person" size={40}></Icon>
         <Text>Perfil</Text>
@@ -55,7 +56,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.2,
     shadowRadius: 8,
+    
 
-  },
+    }
   
-});
+});*/
